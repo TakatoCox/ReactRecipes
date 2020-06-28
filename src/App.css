@@ -41,7 +41,7 @@
   width: 100%;
   color: orangered;
   font-weight: 5px;
-  font-family: cursive,sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 20px;
   }
 .ingItem:hover, .dirItem:hover{
