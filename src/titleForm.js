@@ -16,9 +16,9 @@ const handleSubmitTitle=(e)=>{
 return (
         <form onSubmit={handleSubmitTitle}>   
             <div className="form">
-            <input type="text" placeholder="title" value={title}
+            <input type="text" placeholder="Title" value={title}
             onChange={e=>setTitle(e.target.value)} />
-            <input type="submit" value="ADD+"/>
+            <input type="submit" value="+"/>
             </div>
         </form> 
         )

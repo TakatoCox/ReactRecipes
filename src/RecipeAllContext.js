@@ -1,6 +1,7 @@
 import React, {useState, createContext, useEffect} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+
 export const RecipeContext = createContext();
 
 const RecipeContextProvider = (props) => {
@@ -75,9 +76,9 @@ const RecipeContextProvider = (props) => {
 
 
 //add to local storage
-useEffect(()=>{
-    localStorage.setItem('recipes', JSON.stringify(recipes))
-},[recipes]);
+    useEffect(()=>{
+        localStorage.setItem('recipes', JSON.stringify(recipes))
+    },[recipes]);
 
     return ( 
         <RecipeContext.Provider value={{addCard, recipes,addTitle, addIng, removeIng, removeDir, addDir, removeRecipe}}>

@@ -17,8 +17,8 @@ return (
         <form onSubmit={handleSubmitDir}>   
             <div className="form">
             <input  type="text" placeholder="Direction" value={dir} 
-            onChange={e=>setDir(e.target.value)}/> :
-            <input type="submit" value="Add+"/>
+            onChange={e=>setDir(e.target.value)}/>
+            <input type="submit" value="+"/>
             </div>
         </form> 
         )

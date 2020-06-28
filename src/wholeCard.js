@@ -3,14 +3,12 @@ import { RecipeContext } from './RecipeAllContext';
 import TitleForm from './titleForm';
 import IngredientForm from './IngredientForm'
 import DirectionsForm from './directionsForm';
+import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 
 
 const WholeCard = () => {
-    //temporary states
     //use context functions
     const {addCard, recipes, removeIng, removeDir, removeRecipe} = useContext(RecipeContext);
-
-    //use context functions after form submission
 
     return ( 
         <div className="cardContainer">
@@ -26,7 +24,11 @@ const WholeCard = () => {
                 <h4 className="ingTitle">Ingredients</h4>
                 <ul className="ingredientsList">
                     {rec.ingredients.map(i=>
-                        <li key={i.idIng} onClick={()=>{removeIng(i.idIng)}}className="ingItem">{i.ing} : {i.amount}</li>)}
+                        <li key={i.idIng} 
+                        onClick={()=>{removeIng(i.idIng)}}
+                        className="ingItem">
+                        {i.ing} : {i.amount}
+                        </li>)}
                 </ul>
                 <IngredientForm recId={rec.id}/>
 
@@ -34,15 +36,21 @@ const WholeCard = () => {
                 <h4 className="dirTitle">Directions</h4>
                 <ul className="directionsList">
                     {rec.directions.map(i=>
-                        <li key={i.idDir} onClick={()=>{removeDir(i.idDir)}}className="dirItem">{i.dir}</li>)}
+                        <li key={i.idDir} 
+                        onClick={()=>{removeDir(i.idDir)}}
+                        className="dirItem">
+                        {i.dir}
+                        </li>)}
                 </ul>
                 <DirectionsForm recId={rec.id}/>
 
                 {/*Remove Entire Recipe*/}
-                <button onClick={()=>{removeRecipe(rec.id)}} className="deleteCard">Del</button>                
-        </div>
+                <DeleteOutlinedIcon color="secondary" onClick={()=>{removeRecipe(rec.id)}} className="deleteCard"/>                
+            </div>
              )}
-        <button className="addCard" onClick={addCard}>+</button>
+
+             {/*Add Recipe Card*/}
+            <button className="addCard" onClick={addCard}>+</button>
         </div>
      );
 }

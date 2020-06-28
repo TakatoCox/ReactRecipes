@@ -10,14 +10,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color:rgb(248, 233, 102);
+  background-color:rgb(248, 246, 102);
   border-radius: 20px;
   width:300px;
   min-height: 350px;
   margin-bottom: 10px;
-  border-style: none;
-  border-color: blue;
-  border-width: 1px;
 }
 .cardTitle{
   font-Size:25px;
@@ -41,12 +38,13 @@
   width: 100%;
   color: orangered;
   font-weight: 5px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   font-size: 20px;
   }
 .ingItem:hover, .dirItem:hover{
   opacity: 0.7;
   text-decoration: line-through;
+  cursor: pointer;
 }
 .form{
   width:100%;
@@ -54,71 +52,52 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 input[type='text']{
   width:35%;
-  margin-left: 5px;
   background: none;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.5;
   border: none;
   border-bottom: 1px solid grey;
+  outline:none;
   }
   input[type='submit']{
-  width:15%;
-  height: 100%;
-  font-size:10px;
+  font-size:20px;
+  font-weight: bold;
   text-align: center;
-  margin-left: 5px;
-  color: white;
+  color: orange;
   border: none;
-  background-color: orange;
-  border-radius: 20px;
+  background: none;
+  border-radius: 100%;
+  outline:none;
   }
   input[type='submit']:hover{
-  background-color: rgb(255, 220, 156);
-  width: 50px;
-  height:35px;
-  font-size: 15px;
-  color: white;
-  border-radius: 20px;
-  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
   }
 .deleteCard{
-  width: 10%;
-  height:20px;
   align-self: center;
-  justify-self: flex-end;
-  font-size:10px;
-  text-align: center;
-  background-color: red;
-  color:white;
-  border-style: hidden;
-  border-radius: 30px;
-  margin:0;
 }
 .deleteCard:hover{
-  color:rgb(243, 148, 148);
-  width: 50px;
-  height:35px;
-  font-size: 20px;
-  color: white;
-  border-radius: 30px;
+  cursor: pointer;
+  color: blue;
 }
 .addCard{
-  width:80px;
-  height:80px;
+  width:300px;
+  min-height: 350px;
   border: none;
-  border-radius: 100%;
-  background-color:rgb(248, 233, 102);
+  border-radius: 20px;
+  background-color:rgb(248, 246, 102);
   text-align: center;
   color: orange;
   font-weight: bold;
-  font-size: 60px;
+  font-size:100px;
+  outline:none;
 }
 .addCard:hover{
   border:none;
   opacity:0.5;
+  cursor: pointer;
 }
 

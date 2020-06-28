@@ -23,7 +23,7 @@ return (
             onChange={e=>setItem(e.target.value)}/> :
             <input type="text" placeholder="Amount" value={amount}
             onChange={e=>setAmount(e.target.value)} />
-            <input type="submit" value="Add+"/>
+            <input type="submit" value="+"/>
             </div>
         </form> 
         )
