@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff5d8;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.header{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  Color: black;
+}
+.headerTitle{
+  font-family: cursive, sans-serif;
+  margin: 0;
+  margin-top:20px;
+  padding: 5px;
+  font-weight: bold;
+  font-weight: 50%;
+  font-size: 90px;
+}
+.recipes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
